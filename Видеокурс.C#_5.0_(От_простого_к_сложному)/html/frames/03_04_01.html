@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../../css/playerskin.css" rel="stylesheet" type="text/css" />
+<script src="../../scripts/jquery-1.7.1.min.js" ></script>
+<script src="../../scripts/jquery-ui-1.8.15.custom.min.js" ></script>
+<script src="../../scripts/swfobject.js"></script>
+<script src="../../scripts/modernizr.js"></script>
+<script src="../../scripts/handlebars.js"></script>
+
+<script src="../../scripts/player-min.js" charset="utf-8"></script>
+<script type="text/javascript">
+    TSC.playerConfiguration.setFlashPlayerSwf("playercontroller.swf");
+    TSC.playerConfiguration.setMediaSrc("../../video/03_04_01.mp4");
+    
+    TSC.playerConfiguration.setAutoHideControls(true);
+    TSC.playerConfiguration.setBackgroundColor("#000000");
+    TSC.playerConfiguration.setCaptionsEnabled(false);
+    TSC.playerConfiguration.setSidebarEnabled(false);
+    
+    TSC.playerConfiguration.setAutoPlayMedia(false);
+    TSC.playerConfiguration.setPosterImageSrc("../../images/firstframe.png");
+    TSC.playerConfiguration.setIsSearchable(false);
+    TSC.playerConfiguration.setEndActionType("stop");
+    TSC.playerConfiguration.setEndActionParam("true");
+    TSC.playerConfiguration.setAllowRewind(-1);
+    
+
+    TSC.localizationStrings.setLanguage(TSC.languageCodes.ENGLISH);
+
+    $(document).ready(function (e) {
+        TSC.mediaPlayer.init("#tscVideoContent");
+    });
+</script>
+</head>
+<body>
+
+<div id="tscVideoContent"></div>
+
+
+
+</body>
+</html>
